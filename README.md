@@ -1,12 +1,12 @@
-🤖 LangChain – Chat With Your Data
-This project leverages LangChain, OpenAI, and vector databases (like FAISS, Pinecone, or Chroma) to allow natural language querying over your own documents and data. It's a foundational implementation of building an AI chatbot that understands your data.
+# 🤖 LangChain – Chat With Your Data
+This project leverages LangChain, OpenAI, and vector databases (like Chroma) to allow natural language querying over your own documents and data. It's a foundational implementation of building an AI chatbot that understands your data.
 
-🚀 Features
+## 🚀 Features
 💬 Chat with PDF, TXT, or CSV files using natural language
 
 🧠 Uses LangChain to manage LLM-driven pipelines
 
-🗃️ Supports FAISS / ChromaDB vector storage
+🗃️ Supports ChromaDB vector storage
 
 🔗 Integrated with OpenAI’s GPT models
 
@@ -14,54 +14,71 @@ This project leverages LangChain, OpenAI, and vector databases (like FAISS, Pine
 
 ⚙️ Modular and extensible Python backend
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Language: Python 3.9+
 
-Core Libraries: LangChain, OpenAI, FAISS / Chroma, PyPDF2, tiktoken
+Core Libraries: LangChain, OpenAI, Chroma, PyPDF2, tiktoken
 
 LLM Provider: OpenAI GPT-3.5 / GPT-4
 
-Frontend (if applicable): Streamlit / Gradio / Flask (optional UI layer)
-
-📂 Folder Structure
+## 📂 Folder Structure
 
 /langchain-chat-with-your-data
+
 │── main.py                   # Entry point
+
 │── ingest.py                 # Handles data ingestion and vector store creation
+
 │── chat.py                   # Handles querying and chatbot interaction
+
 │── config.py                 # Environment configuration
+
 │── requirements.txt
+
 │── README.md
-🔧 Setup Instructions
-1️⃣ Clone the Repository
+
+## 🔧 Setup Instructions
+
+### 1️⃣ Clone the Repository
 
 git clone https://github.com/abhinav744/langchain-chat-with-your-data.git
+
 cd langchain-chat-with-your-data
-2️⃣ Create and Activate a Virtual Environment
+
+### 2️⃣ Create and Activate a Virtual Environment
 
 python -m venv venv
+
 source venv/bin/activate        # On Windows: venv\Scripts\activate
-3️⃣ Install Dependencies
+
+### 3️⃣ Install Dependencies
 
 pip install -r requirements.txt
-4️⃣ Set Up Environment Variables
+
+### 4️⃣ Set Up Environment Variables
+
 Create a .env file in the root directory and add:
 
 
 OPENAI_API_KEY=your_openai_api_key
-5️⃣ Ingest Your Data
+
+### 5️⃣ Ingest Your Data
 
 python ingest.py
+
 This script will read documents from the ./data/ folder and generate a vector index.
 
-6️⃣ Start Chat Interface
+### 6️⃣ Start Chat Interface
 
 python chat.py
+
 Then enter a query like:
 
 
 > What is this document about?
-📁 Data Formats Supported
+
+## 📁 Data Formats Supported
+
 ✅ .pdf
 
 ✅ .txt
@@ -70,7 +87,8 @@ Then enter a query like:
 
 (More formats can be added with minor code changes)
 
-📈 Use Cases
+## 📈 Use Cases
+
 Internal document search
 
 Customer support knowledge base
@@ -79,17 +97,10 @@ Academic paper summarization
 
 Business report querying
 
-🔐 Security & Privacy
+## 🔐 Security & Privacy
+
 Your documents are processed locally, and embeddings are stored in a local vector DB (unless configured for cloud). You have full control over your data.
 
-📌 To-Do / Improvements
- Add web UI (Streamlit/Gradio)
 
- Add Pinecone/Weaviate support
-
- Multi-file support & metadata filtering
-
- Chat history persistence
-
-🤝 Contributing
+## 🤝 Contributing
 Pull requests are welcome! Feel free to fork the repo and submit changes to improve the project.
